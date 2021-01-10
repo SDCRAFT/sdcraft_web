@@ -1,0 +1,15 @@
+@font-face {
+font-family: 'Unifont';
+src: url(https://cdn.jsdelivr.net/gh/heartalborada-del/fonts/Unifont.eot');
+src:
+url('https://cdn.jsdelivr.net/gh/heartalborada-del/fonts/Unifont.eot') format('embedded-opentype'),
+url('https://cdn.jsdelivr.net/gh/heartalborada-del/fonts/Unifont.woff2') format('woff2'),
+url('https://cdn.jsdelivr.net/gh/heartalborada-del/fonts/Unifont.woff') format('woff'),
+url('https://cdn.jsdelivr.net/gh/heartalborada-del/fonts/Unifont..ttf') format('truetype'),
+url('https://cdn.jsdelivr.net/gh/heartalborada-del/fonts/Unifont.svg') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+*:not([class*="icon"]):not(i) {
+font-family: "Unifont" !important;
+}
