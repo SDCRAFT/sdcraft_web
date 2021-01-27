@@ -40,6 +40,20 @@
     <title>沙雕生存服务器</title>
   </head>
   <body class="mdui-theme-primary-indigo">
+    <audio id="background-music" src="https://m10.music.126.net/20210127175435/f35f09bf3e7201405419c5bb54ea2f51/ymusic/obj/w5zDlMODwrDDiGjCn8Ky/2886408961/c2dd/ffe7/f8d5/c31c18f2aaad16af5a4095738a00b5b7.mp3"  autoplay="autoplay" loop="loop"></audio>
+    <script>
+      function bf(){
+       var audio = document.getElementById('background-music'); 
+       var button = document.getElementById('music-button')
+        if(audio.paused){                 
+            audio.play();
+            button.innerHTML = "pause";
+        }else{
+         audio.pause();
+         button.innerHTML = "play_arrow";
+        }
+      }
+      </script>
     <div class="mdui-appbar mdui-appbar-scroll-hide">
         <div class="mdui-toolbar mdui-color-theme">
           <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
@@ -100,7 +114,7 @@
                 <div class="mdui-dialog-title">Liu</div>
                 <div class="mdui-dialog-content">
                 <p>Kizuna AI单推人</p>
-                <p><a target="_blank" href="https://space.bilibili.com/281717652/">bilibli</a></p>
+                <p><a target="_blank" href="https://space.bilibili.com/281717652/">bilibli</a>   |   <a href="mailto:liukeluo.studio@gmail.com">e-mail</a></p>
                 </div>
                 <div class="mdui-dialog-actions">
                   <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
@@ -154,7 +168,18 @@
       </div>
       <p>正在加载......</p>
     </div>
-    <a href="#top"><button class="mdui-fab mdui-fab-fixed mdui-ripple"><i class="mdui-icon material-icons">arrow_upward</i></button></a>
+    <div class="mdui-fab-wrapper" mdui-fab="">
+      <button class="mdui-fab mdui-ripple mdui-color-theme-accent">
+        <i class="mdui-icon material-icons">add</i>
+        <i class="mdui-icon mdui-fab-opened material-icons">mode_edit</i>
+      </button>
+      <div class="mdui-fab-dial" style="height: 0px;">
+        <a href="#top"><button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-pink" style="transition-delay: 0ms;"><i class="mdui-icon material-icons">arrow_upward</i></button></a>
+        <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-red" style="transition-delay: 15ms;" onclick="bf()"><i class="mdui-icon material-icons" id="music-button">pause</i></button>
+        <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-orange" style="transition-delay: 30ms;"><i class="mdui-icon material-icons">access_alarms</i></button>
+        <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-blue" style="transition-delay: 45ms;"><i class="mdui-icon material-icons">touch_app</i></button>
+      </div>
+    </div>
     <footer class="footer">
       <!-- 页脚信息 -->
       <script type="text/javascript">
