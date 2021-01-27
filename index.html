@@ -39,10 +39,10 @@
       type="text/css">
     <title>沙雕生存服务器</title>
   </head>
-  <body class="mdui-theme-primary-indigo" onload="text()">
+  <body class="mdui-theme-primary-indigo">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <!--背景音乐开始-->
-    <audio id="audio" src="https://heartalborada-my.sharepoint.com/personal/admin_heartalborada_onmicrosoft_com/_layouts/52/download.aspx?share=EZ_4lwkp0clJkry6l00qi9UBXgS0SJbZ1cA-rRbxTcF5bw"  autoplay="autoplay" loop="loop"></audio>
+    <audio id="audio" src="https://heartalborada-my.sharepoint.com/personal/admin_heartalborada_onmicrosoft_com/_layouts/52/download.aspx?share=EZ_4lwkp0clJkry6l00qi9UBXgS0SJbZ1cA-rRbxTcF5bw"  autoplay="autoplay" loop="loop" volume="0.5"></audio>
     <script src="bg-music.js"></script>
     <!--背景音乐结束-->
     <div class="mdui-appbar mdui-appbar-scroll-hide">
@@ -52,7 +52,18 @@
           <div class="mdui-toolbar-spacer"></div>
           <a mdui-dialog="{target: '#info'}" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">info</i></a>
           <a onclick="reloadPage()" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">refresh</i></a>
-          <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">more_vert</i></a>
+          <a class="mdui-btn mdui-btn-icon" mdui-menu="{target:'#music'}"><i class="mdui-icon material-icons">music_note</i></a>
+          <ul class="mdui-menu" id="music" style="width:60%">
+            <div>
+              <h4 style="margin-left: 6%;margin-top: 2%;">音量调整</h4>
+              <h5 style="margin-left: 6%;margin-top: 2%;" id="volume-display">50%</h5>
+            </div>
+            <div class="mdui-container mdui-p-t-5" style="width:90%">
+              <label class="mdui-slider">
+              <input type="range" id="volume" step="0.01" min="0" max="1" value="0.5" oninput="changeVolume()"/>
+              </label>
+            </div>
+          </ul>
         </div>
         <div class="mdui-dialog" id="info">
           <div class="mdui-dialog-title">关于我们</div>

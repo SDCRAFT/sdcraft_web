@@ -32,10 +32,16 @@
        else{
            num=1;
        }
-     audio.src = 'https://heartalborada-my.sharepoint.com/personal/admin_heartalborada_onmicrosoft_com/_layouts/52/download.aspx?share=' + url[num];
+    audio.src = 'https://heartalborada-my.sharepoint.com/personal/admin_heartalborada_onmicrosoft_com/_layouts/52/download.aspx?share=' + url[num];
        audio.play();
-   }
-   audio.addEventListener('ended',function(){
-     next.onclick();
-   },false);
+    }
+    audio.addEventListener('ended',function(){
+        next.onclick();
+    },false);
    // 上一首
+    function changeVolume(){
+        var display=document.getElementById('volume-display');
+        var Volume=document.getElementById('volume').value;
+        audio.volume=Volume;
+        display.innerHTML = Math.round(Volume * 100)+"%";
+    }
