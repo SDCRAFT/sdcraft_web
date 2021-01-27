@@ -1,3 +1,11 @@
+    function load_music(){
+      var htmlobj= $.ajax({url:"music-url.txt",async:false})
+      var dataString = htmlobj.responseText
+      console.log(dataString)
+      url=dataString.split(";")
+      console.log(url)
+      audio.src='https://heartalborada-my.sharepoint.com/personal/admin_heartalborada_onmicrosoft_com/_layouts/52/download.aspx?share='+url[1]
+    }
     function bf(){
     var button = document.getElementById('music-button');
      if(audio.paused){                 
@@ -11,7 +19,6 @@
    function reloadPage(){
      window.location.reload()
    }
-   var url=["EZ_4lwkp0clJkry6l00qi9UBXgS0SJbZ1cA-rRbxTcF5bw","EQHDBwHXT3tIjYq55OIOSXoBdx11c4LkRQUBKuelhZR_3A","EUD-bCI4s0ZDrC_x8Bzlg20BEvQAl7dh9s9vhnfrITG4Cw","EWXKwIMO67VIlrzUNG9VBOsBT6lRakfiz8HGFbd3Kjyjxw","EW0Cbj0Vh8hLjJ5-Mz6sbv4BzCYdTEy1StgBglAgIkAnrw"]
    var num=1;
    var len=4
    function prev(){
