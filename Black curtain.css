@@ -1,0 +1,11 @@
+.heimu,.heimu a{
+    background-color: #252525;
+    color:#252525;
+    text-shadow: none;
+}::selection{
+    background:#9ab0c0;
+}
+.heimu:hover,.heimu:hover a{
+    transition:color .13s linear;
+    color:#fff;
+}
