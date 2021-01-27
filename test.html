@@ -1,22 +1,82 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>test</title>
-    <script>
-        function myFunction(){
-            var r=confirm("你要进入我的米奇妙♂妙♂屋吗?");
-            if (r==true)
-            {
-            x="你按下了\"确定\"按钮!";
-            }
-            else    
-            {
-            alert("");
-            }
-        }
-        </script>
-        
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>音乐播放器</title>
+<style>
+#music {
+	width: 500px;
+	height: 500px;
+	border-radius: 10px;
+	margin: 20px auto;
+	position: relative;
+	background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1545149319600&di=b1ec2d1c0aa00fa507eee88b75198133&imgtype=0&src=http%3A%2F%2Fwww.17qq.com%2Fimg_qqtouxiang%2F74841037.jpeg) no-repeat;
+	background-size: cover;
+	text-align: center;
+}
+#container {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 500px;
+	height: 500px;
+	text-align: center;
+	background:rgba(255,255,255,0.6);
+}
+#musicImg{
+	width: 300px;
+	height: 300px;
+	text-align: center;
+	margin: auto;
+	border-radius:50%;
+	}
+</style>
 </head>
+ 
 <body>
-    <input type="button" onclick="myFunction()" value="显示警告框">
+<div id="music">
+	<div id="container">
+		<h3 id="musicName">音乐播放器</h3>
+		<audio src="" id="audio">low browsers not support</audio>
+		<div class="btn">
+			<button id="play">开始</button>
+			<button id="pause">暂停</button>
+			<button id="prev">上一首</button>
+			<button id="next">下一首</button>
+		</div>
+	</div>
+</div>
+<script>
+url=["EZ_4lwkp0clJkry6l00qi9UBXgS0SJbZ1cA-rRbxTcF5bw","EQHDBwHXT3tIjYq55OIOSXoBdx11c4LkRQUBKuelhZR_3A","EUD-bCI4s0ZDrC_x8Bzlg20BEvQAl7dh9s9vhnfrITG4Cw","EWXKwIMO67VIlrzUNG9VBOsBT6lRakfiz8HGFbd3Kjyjxw","EW0Cbj0Vh8hLjJ5-Mz6sbv4BzCYdTEy1StgBglAgIkAnrw"]
+var num=1;
+var len=4
+prev.onclick = function(){
+	if(num>1){
+		num = num - 1;
+		}
+	else{
+		num=4;
+		}
+	audio.src = 'https://heartalborada-my.sharepoint.com/personal/admin_heartalborada_onmicrosoft_com/_layouts/52/download.aspx?share=' + url[num];
+	audio.play();
+}
+// 下一首
+next.onclick = function(){
+	if(num<4){
+		num = num + 1;
+		}
+	else{
+		num=1;
+		}
+    audio.src = 'https://heartalborada-my.sharepoint.com/personal/admin_heartalborada_onmicrosoft_com/_layouts/52/download.aspx?share=' + url[num];
+	audio.play();
+}
+audio.addEventListener('ended',function(){
+	next.onclick();
+},false);
+// 上一首
+</script>
 </body>
+</html>
