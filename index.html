@@ -26,7 +26,8 @@
       crossorigin="anonymous"
     />
     <!-- Unifont -->
-    <link rel="stylesheet" 
+    <link 
+      rel="stylesheet" 
       href="Unifont.css" 
       type="text/css">
     <!-- Footer -->
@@ -34,16 +35,17 @@
       href="footer.css" 
       type="text/css">
     <!-- 黑幕 -->
-    <link rel="stylesheet" 
+    <link 
+      rel="stylesheet" 
       href="Black curtain.css" 
       type="text/css">
+    <link 
+      rel="stylesheet" 
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+      crossorigin="anonymous">
     <title>沙雕生存服务器</title>
   </head>
   <body class="mdui-theme-primary-indigo" onload="load_music()">
-    <script>
-      if(true==audio.ended){
-      alert("弹出信息");}
-  </script> 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <!--背景音乐开始-->
     <audio id="audio" src=""  autoplay="autoplay" volume="50%" onended="next()"></audio>
@@ -90,6 +92,9 @@
           <p>这是一个由一位初中UP主所搭建的服务器</p>
           <p>背景音乐是：ひらひら ひらら【神楽七奈×千条アリア】（翻自 ClariS）</p>
           <p><a href="https://music.163.com/#/song?id=1465784160">网易云</a></p>
+          <a href="https://github.com/heartalborada-del/sdcraft_web">
+            <i class="fa fa-github" aria-hidden="true"></i> 去GitHub下载源码
+          </a>
           </div>
           <div class="mdui-dialog-actions">
             <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
@@ -219,7 +224,8 @@
         var year=today.getFullYear()
         document.write("沙雕生存服务器 © 2020-"+year+".")
       </script>
-      <div style="float: auto;">
+      <br>
+      <div style="display: inline-block">
         <script type="text/javascript">
           var today=new Date()
           var year=today.getFullYear()

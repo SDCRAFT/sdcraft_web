@@ -34,7 +34,8 @@
     function music_speed_change(){
       clearInterval(music_speed_f);
       var progress_change=document.getElementById("change")
-      if (duration=="NaN"){
+      var tag=document.getElementById('all_time')
+      if (tag.innerText=="总时长:NaNs"){
         alert("音乐还未加载完毕哦,请再等等吧!");
       }
       else{
