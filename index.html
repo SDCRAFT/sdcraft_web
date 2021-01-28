@@ -40,9 +40,13 @@
     <title>沙雕生存服务器</title>
   </head>
   <body class="mdui-theme-primary-indigo" onload="load_music()">
+    <script>
+      if(true==audio.ended){
+      alert("弹出信息");}
+  </script> 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <!--背景音乐开始-->
-    <audio id="audio" src=""  autoplay="autoplay" loop="loop" volume="50%" onended="next()" onload="music_speed()"></audio>
+    <audio id="audio" src=""  autoplay="autoplay" volume="50%" onended="next()"></audio>
     <script src="bg-music.js"></script>
     <!--背景音乐结束-->
     <div class="mdui-appbar mdui-appbar-scroll-hide">
@@ -53,7 +57,7 @@
           <a mdui-dialog="{target: '#info'}" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">info</i></a>
           <a onclick="reloadPage()" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">refresh</i></a>
           <a class="mdui-btn mdui-btn-icon" mdui-menu="{target:'#music'}"><i class="mdui-icon material-icons">music_note</i></a>
-          <ul class="mdui-menu" id="music" style="width:60%">
+          <ul class="mdui-menu" id="music" style="width:170px;height:440px;">
             <div>
               <h4 style="margin-left: 6%;margin-top: 2%;">背景音乐设置</h4>
               <h5 style="margin-left: 6%;margin-top: 2%;" id="volume-display">当前音量:50%</h5>
@@ -69,7 +73,7 @@
               <div>
                 <h5 style="text-align:center" id="all_time"></h5>
                 <h5 style="text-align:center" id="play_time"></h5>
-                <h4 style="text-align:center" id="text_play"></h4>
+                <p style="text-align:center" id="text_play"></p>
               </div>
               <label class="mdui-slider">
                 <div class="mdui-progress">
@@ -180,7 +184,6 @@
         </div>
       </div>
     </div>
-    <div id="askejedmsa">1</div>
     <div class="mdui-divider" style="margin-top:10px;"></div>
     <div style="text-align:center;">
       <div style="margin:0 auto"><h1>开发进度:10%</h1></div>
