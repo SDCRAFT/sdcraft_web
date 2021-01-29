@@ -1,9 +1,9 @@
+    audio=document.getElementById("bg-audio")
     //从文件中加载音乐
     function load_music(){
-      mdui.alert("音乐设置:左下角加号和右上角音乐图标");
-      play_music_tip = new mdui.Tooltip('#music-button',{content: '播放音乐', position: 'left'});
+      mdui.alert("音乐设置:左下角加号和右上角音乐图标","Tips:",empty(),{confirmText:'我知道了',modal:true,history:false,closeOnEsc:false});
       //ajax载入文件-开始
-      var htmlobj= $.ajax({url:"/music-url.txt",async:false});
+      var htmlobj= $.ajax({url:"assets/music-url.txt",async:false});
       var dataString = htmlobj.responseText;
       //ajax载入文件-结束
       url=dataString.split(";");//分割文本
@@ -77,10 +77,6 @@
         audio.pause();//暂停音乐
       }
     }
-    //更改tips
-    function change_tips(id,con,pos){
-      id.open({content: con,position:pos})
-    }
     //更改按钮图标
     function button_icon_change(id,icon){
       var Element=document.getElementById(id)
@@ -120,3 +116,4 @@
       audio.volume=Volume;//调整音量
       display.innerHTML = "当前音量:"+Math.round(Volume * 100)+"%";//变更显示内容
     }
+    function empty(){}

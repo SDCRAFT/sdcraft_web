@@ -2,15 +2,17 @@
 <html lang="zh-Hans">
   <head>
     <meta charset="utf-8">
-    <link rel="icon" href="logo.png" type="image/x-icon">
-    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <!--图标开始-->
+    <link rel="icon" href="assets/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+    <!--图标结束-->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
     <meta name="renderer" content="webkit"/>
     <meta name="force-rendering" content="webkit"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <!-- Boostrap For Minecraft -->
     <link rel="stylesheet" 
-      href="mojang.css" 
+      href="css/mojang.css" 
       type="text/css">
     <!-- bootstrap 4.3.1 -->
     <link 
@@ -28,16 +30,16 @@
     <!-- Unifont -->
     <link 
       rel="stylesheet" 
-      href="Unifont.css" 
+      href="css/Unifont.css" 
       type="text/css">
     <!-- Footer -->
     <link rel="stylesheet" 
-      href="footer.css" 
+      href="css/footer.css" 
       type="text/css">
     <!-- 黑幕 -->
     <link 
       rel="stylesheet" 
-      href="Black curtain.css" 
+      href="css/Black-curtain.css" 
       type="text/css">
     <link 
       rel="stylesheet" 
@@ -47,14 +49,18 @@
   </head>
   <body class="mdui-theme-primary-indigo padding-top" onload="load_music()">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <audio id="egg-audio" src=""></audio>
     <!--背景音乐开始-->
-    <audio id="audio" src=""  autoplay="autoplay" volume="50%" onended="next()" onplay="button_icon_change('music-button','pause');change_tips(play_music_tip,'暂停音乐','left')" onpause="button_icon_change('music-button','play_arrow');change_tips(play_music_tip,'播放音乐','left')"></audio>
-    <script src="bg-music.js"></script>
+    <audio id="bg-audio" src=""  autoplay="autoplay" volume="50%" onended="next()" onplay="button_icon_change('music-button','pause');" onpause="button_icon_change('music-button','play_arrow');"></audio>
+    <script src="js/bg-music.js"></script>
     <!--背景音乐结束-->
+    <!--彩蛋开始-->
+    <script src="js/colored-eggs.js"></script>
+    <!--彩蛋结束-->
     <div class="mdui-appbar mdui-appbar-scroll-hide mdui-appbar-fixed">
         <div class="mdui-toolbar mdui-color-theme">
           <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
-          <a href="javascript:;" class="mdui-typo-title">沙雕生存服务器</a>
+          <a href="javascript:;" class="mdui-typo-title" onclick="egg1()">沙雕生存服务器</a>
           <div class="mdui-toolbar-spacer"></div>
           <a mdui-dialog="{target: '#info'}" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">info</i></a>
           <a onclick="reloadPage()" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">refresh</i></a>
@@ -109,7 +115,7 @@
       <div stlye="margin:0 auto"><h1>服务器管理团队</h1></div>
       <div class="mdui-card" style="height: 215px;width: 350px;margin-right: 5px;display: inline-block;margin:0 auto">
         <div class="mdui-card-media">
-          <img src="card.jpg"/>
+          <img src="assets/card.jpg"/>
           <div class="mdui-card-media-covered">
             <div class="mdui-card-primary">
               <div style="width: 5px;height: 3px;">
@@ -136,7 +142,7 @@
       </div>
       <div class="mdui-card" style="height: 215px;width: 350px;margin-right:5px;display: inline-block;margin:0 auto">
         <div class="mdui-card-media">
-          <img src="card.jpg"/>
+          <img src="assets/card.jpg"/>
           <div class="mdui-card-media-covered">
             <div class="mdui-card-primary">
               <div style="width: 5px;height: 3px;">
@@ -163,7 +169,7 @@
       </div>
       <div class="mdui-card" style="height: 215px;width: 350px;margin-right:5px;display: inline-block;margin:0 auto">
         <div class="mdui-card-media">
-          <img src="card.jpg"/>
+          <img src="assets/card.jpg"/>
           <div class="mdui-card-media-covered">
             <div class="mdui-card-primary">
               <div style="width: 5px;height: 3px;">
@@ -193,7 +199,7 @@
     <div style="text-align:center;">
       <div style="margin:0 auto"><h1>开发进度:10%</h1></div>
     </div>
-    <div class="mdui-progress">
+    <div class="mdui-progress" onclick="egg2()">
       <div class="mdui-progress-determinate" style="width: 10%;"></div>
     </div>
     <div class="preloader">
@@ -212,7 +218,7 @@
       </button>
       <div class="mdui-fab-dial" style="height: 0px;">
         <a href="#top"><button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-pink" style="transition-delay: 0ms;" mdui-tooltip="{content: '到顶部', position: 'left'}"><i class="mdui-icon material-icons" >arrow_upward</i></button></a>
-        <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-red" style="transition-delay: 15ms;" onclick="bf()"><i class="mdui-icon material-icons" id="music-button">play_arrow</i></button>
+        <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-red" style="transition-delay: 15ms;" onclick="bf()" mdui-tooltip="{content: '暂停/播放音乐' , position: 'left'}"><i class="mdui-icon material-icons" id="music-button">play_arrow</i></button>
         <button onclick="next();" class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-orange" style="transition-delay: 30ms;"><i class="mdui-icon material-icons" mdui-tooltip="{content: '下一曲', position: 'left'}">skip_next</i></button>
         <button onclick="prev();" class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-blue" style="transition-delay: 45ms;"><i class="mdui-icon material-icons" mdui-tooltip="{content: '上一曲', position: 'left'}">skip_previous</i></button>
       </div>
