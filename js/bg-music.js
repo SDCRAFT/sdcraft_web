@@ -116,4 +116,12 @@
       audio.volume=Volume;//调整音量
       display.innerHTML = "当前音量:"+Math.round(Volume * 100)+"%";//变更显示内容
     }
+    //空函数
     function empty(){}
+    //音乐ID3解析
+    function load_ID3(url){
+      ID3.loadTags(url, function() {
+        var tags = ID3.getAllTags(url);
+        alert(tags.artist + " - " + tags.title + ", " + tags.album);
+    })
+    }

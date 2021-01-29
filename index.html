@@ -47,14 +47,21 @@
       crossorigin="anonymous">
     <title>沙雕生存服务器</title>
   </head>
+  <customHeaders>
+    <add name="Access-Control-Allow-Origin" value="*" /><!--支持全域名访问，不安全，部署后需要固定限制为客户端网址-->
+    <add name="Access-Control-Allow-Methods" value="GET, POST, PUT, DELETE, OPTIONS" /><!--支持的http 动作-->
+    <add name="Access-Control-Allow-Headers" value="Content-Type,X-Requested-With,token" /><!--响应头 请按照自己需求添加 这里新加了token这个headers-->
+    <add name="Access-Control-Request-Methods" value="GET, POST, PUT, DELETE, OPTIONS" /><!--允许请求的http 动作-->
+  </customHeaders>
   <body class="mdui-theme-primary-indigo padding-top" onload="load_music()">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <audio id="egg-audio" src=""></audio>
     <!--背景音乐开始-->
     <audio id="bg-audio" src=""  autoplay="autoplay" volume="50%" onended="next()" onplay="button_icon_change('music-button','pause');" onpause="button_icon_change('music-button','play_arrow');"></audio>
     <script src="js/bg-music.js"></script>
+    <script src="js/ID3/dist/id3-minimized.js"></script>
     <!--背景音乐结束-->
     <!--彩蛋开始-->
+    <audio id="egg-audio" src=""></audio>
     <script src="js/colored-eggs.js"></script>
     <!--彩蛋结束-->
     <div class="mdui-appbar mdui-appbar-scroll-hide mdui-appbar-fixed">
@@ -197,10 +204,10 @@
     </div>
     <div class="mdui-divider" style="margin-top:10px;"></div>
     <div style="text-align:center;">
-      <div style="margin:0 auto"><h1>开发进度:10%</h1></div>
+      <div style="margin:0 auto" onclick="egg2()"><h1>开发进度:20%</h1></div>
     </div>
-    <div class="mdui-progress" onclick="egg2()">
-      <div class="mdui-progress-determinate" style="width: 10%;"></div>
+    <div class="mdui-progress">
+      <div class="mdui-progress-determinate" style="width: 20%;"></div>
     </div>
     <div class="preloader">
       <div class="bigsquare" style="margin-top: 10px;">
