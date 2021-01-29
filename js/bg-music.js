@@ -118,10 +118,3 @@
     }
     //空函数
     function empty(){}
-    //音乐ID3解析
-    function load_ID3(url){
-      ID3.loadTags(url, function() {
-        var tags = ID3.getAllTags(url);
-        alert(tags.artist + " - " + tags.title + ", " + tags.album);
-    })
-    }
