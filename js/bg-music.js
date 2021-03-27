@@ -118,13 +118,3 @@
     }
     //空函数
     function empty(){}
-    //ID3解析
-    function ID3(url){
-      var file=$.ajax({
-        url:"https://cors.netnr.workers.dev/"+url
-      })
-      ID3.loadTags(file, function() {
-        var tags = ID3.getAllTags(file);
-        alert(tags.comment + " - " + tags.track + ", " + tags.lyrics);
-    });
-    }
