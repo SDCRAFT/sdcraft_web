@@ -51,7 +51,10 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <!--背景音乐开始-->
     <audio id="bg-audio" src=""  autoplay="autoplay" volume="50%" onended="next()" onplay="button_icon_change('music-button','pause');" onpause="button_icon_change('music-button','play_arrow');"></audio>
-    <script src="js/bg-music.js"></script>
+    <script 
+     src="js/bg-music.js"
+     crossorigin="anonymous"
+    ></script>
     <script src="js/ID3/dist/id3-minimized.js"></script>
     <!--背景音乐结束-->
     <!--彩蛋开始-->
@@ -196,6 +199,7 @@
     <div class="mdui-divider" style="margin-top:10px;"></div>
     <div style="text-align:center;">
       <div style="margin:0 auto" onclick="egg2()"><h1>开发进度:20%</h1></div>
+      <iframe src="Game/2048/2048 Game.html" height="470px" width="370px"></iframe>
     </div>
     <div class="mdui-progress">
       <div class="mdui-progress-determinate" style="width: 20%;"></div>
