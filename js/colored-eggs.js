@@ -2,7 +2,7 @@ egg_audio=document.getElementById('egg-audio')
 bg_audio=document.getElementById("bg-audio")
 tap=0
 function egg1(){
-    mdui.alert("恭喜你发现一个菜单!","彩蛋:",empty(),{confirmText:'ohhhhhhhhh',modal:true,history:false,closeOnEsc:false});
+    mdui.alert("恭喜你发现一个彩蛋!","彩蛋:",empty(),{confirmText:'ohhhhhhhhh',modal:true,history:false,closeOnEsc:false});
     bg_audio.src='https://heartalborada-my.sharepoint.com/personal/admin_heartalborada_onmicrosoft_com/_layouts/52/download.aspx?share=EZ9MdeTGiRBAqUbFwCFrBdIByxFijk_XF-PR2B8Mc1hjUw'
 }
 function egg2(){
