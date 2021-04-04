@@ -204,35 +204,48 @@
                 </div>
             </div>
         </div>
-        <div class="mdui-card mdui-hoverable"
-            style="height: 49.5%;width: 49.5%;margin-right:5px;display: inline-block;margin:0 auto">
-            <div class="mdui-card-media">
-                <img src="assets/card.jpg" />
-                <div class="mdui-card-media-covered">
-                    <div class="mdui-card-primary">
-                        <div style="width: 5px;height: 3px;">
-                            <img class="mdui-card-header-avatar" style="height: 50px;width: 50px;margin: 10px 10px;"
-                                src="https://q1.qlogo.cn/g?b=qq&nk=2954582482&s=5" />
+    </div>
+    <div id="endcredits" class="mdui-card mdui-hoverable">
+        <div class="mdui-card-media">
+            <img src="assets/card.jpg" />
+            <div class="mdui-card-media-covered">
+                <div class="mdui-card-primary">
+                    <div style="width: 5px;height: 3px;">
+                        <img class="mdui-card-header-avatar" style="height: 50px;width: 50px;margin: 10px 10px;"
+                            src="https://q1.qlogo.cn/g?b=qq&nk=2954582482&s=5" />
+                    </div>
+                    <div class="mdui-card-primary-title">EndCredits
+                    </div>
+                    <div class="mdui-card-primary-subtitle">Positive Outlook!</div>
+                    <button class="mdui-btn" style="float: right;"
+                        mdui-dialog="{target: '#admin-EndCredits'}">点我康康</button>
+                    <div class="mdui-dialog" id="admin-EndCredits">
+                        <div class="mdui-dialog-title">EndCredits</div>
+                        <div class="mdui-dialog-content">
+                            <p>是萌新</p>
+                            <p><a target="_blank" href="https://github.com/EndCredits">Github</a></p>
                         </div>
-                        <div class="mdui-card-primary-title">EndCredits</div>
-                        <div class="mdui-card-primary-subtitle">Positive Outlook!</div>
-                        <button class="mdui-btn" style="float: right;"
-                            mdui-dialog="{target: '#admin-EndCredits'}">点我康康</button>
-                        <div class="mdui-dialog" id="admin-EndCredits">
-                            <div class="mdui-dialog-title">EndCredits</div>
-                            <div class="mdui-dialog-content">
-                                <p>是萌新</p>
-                                <p><a target="_blank" href="https://github.com/EndCredits">Github</a></p>
-                            </div>
-                            <div class="mdui-dialog-actions">
-                                <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
-                            </div>
+                        <div class="mdui-dialog-actions">
+                            <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script text="text/javascript">
+        var a = window.screen.width;
+        if (a < 1000) {
+            document.getElementById("heartalborada").style.width = "350px"
+            document.getElementById("heartalborada").style.height = "215px"
+            document.getElementById("liu").style.width = "350px"
+            document.getElementById("liu").style.height = "215px"
+            document.getElementById("lookstars").style.width = "350px"
+            document.getElementById("lookstars").style.height = "215px"
+            document.getElementById("endcredits").style.width = "350px"
+            document.getElementById("endcredits").style.height = "215px"
+        }
+    </script>
     <div class="preloader">
         <div class="bigsquare" style="margin-top: 10px;">
             <div class="square first"></div>
