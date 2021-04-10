@@ -8,4 +8,5 @@
 ~~音乐播放~~ <br>
 音乐ID3解析歌曲(CORS跨域请求失败) <br>
 ~~宣传片(来自大佬[EndCredits](https://github.com/EndCredits))~~ <br>
-~~2048小游戏(想法来自Liu,游戏来自[2048.org](http://www.2048.org))~~
+~~2048小游戏(想法来自Liu,游戏来自[2048.org](http://www.2048.org))~~ <br>
+~~Live 2D看板娘(来自[Live 2D Widget](https://github.com/stevenjoezhang/live2d-widget))~~
