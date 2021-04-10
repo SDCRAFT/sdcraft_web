@@ -19,8 +19,6 @@
   <!-- MDUI CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"
     integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw" crossorigin="anonymous" />
-  <!-- Unifont -->
-  <link rel="stylesheet" href="css/Unifont.css" type="text/css">
   <!-- Footer -->
   <link rel="stylesheet" href="css/footer.css" type="text/css">
   <!-- 黑幕 -->
@@ -29,6 +27,9 @@
     crossorigin="anonymous">
   <!-- Vue -->
   <link rel="stylesheet" href="css/vue/vue-applications.css" type="text/css">
+  <!-- Live 2D -->
+  <script src="js/Live2D/autoload.js"></script>
+  <link rel="stylesheet" href="js/Live2D/waifu.css" type="text/css">
   <!-- Customization -->
   <style>
     body {
@@ -43,17 +44,14 @@
 
 <body class="mdui-theme-primary-indigo padding-top" onload="load_music()">
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <!--背景音乐开始-->
   <audio id="bg-audio" src="" autoplay="autoplay" volume="50%" onended="next()"
     onplay="button_icon_change('music-button','pause');"
     onpause="button_icon_change('music-button','play_arrow');"></audio>
   <script src="js/bg-music.js" crossorigin="anonymous"></script>
   <script src="js/ID3/dist/id3-minimized.js"></script>
-  <!--背景音乐结束-->
-  <!--彩蛋开始-->
+  <script src="js/cookie.js"></script>
   <audio id="egg-audio" src=""></audio>
   <script src="js/colored-eggs.js"></script>
-  <!--彩蛋结束-->
   <div class="mdui-appbar mdui-appbar-scroll-hide mdui-appbar-fixed">
     <div class="mdui-toolbar mdui-color-theme">
       <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
@@ -76,9 +74,16 @@
           class="mdui-icon material-icons">refresh</i></a>
       <a mdui-tooltip="{content: '音乐播放设置'}" class="mdui-btn mdui-btn-icon" mdui-menu="{target:'#music'}"><i
           class="mdui-icon material-icons">music_note</i></a>
-      <ul class="mdui-menu" id="music" style="width:170px;height:440px">
+      <ul class="mdui-menu" id="music" style="width:170px;height:520px">
         <div>
           <h4 style="margin-left: 6%;margin-top: 2%;">背景音乐设置</h4>
+          <p style="margin-left: 6%;margin-top: 2%;">
+            <label class="mdui-checkbox">
+              <input id="DSMI_Btn" type="checkbox" onchange="Music_info()"/>
+              <i class="mdui-checkbox-icon"></i>
+              音乐提示信息开关
+            </label>
+          </p>
           <h5 style="margin-left: 6%;margin-top: 2%;" id="volume-display">当前音量:50%</h5>
         </div>
         <div class="mdui-container mdui-p-t-5" style="width:90%">

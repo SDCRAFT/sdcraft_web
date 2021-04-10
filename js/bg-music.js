@@ -1,7 +1,12 @@
     audio=document.getElementById("bg-audio")
     //从文件中加载音乐
     function load_music(){
-      mdui.alert("音乐设置:左下角加号和右上角音乐图标","Tips:",empty(),{confirmText:'我知道了',modal:true,history:false,closeOnEsc:false});
+      if (checkCookie_DSMI()=="false") {
+        mdui.alert("音乐设置:左下角加号和右上角音乐图标\n可在音乐设置内关掉此提示","Tips:",empty(),{confirmText:'我知道了',modal:true,history:false,closeOnEsc:true});
+      } else {
+        var btn=document.getElementById('DSMI_Btn');
+        btn.setAttribute("checked","")
+      }
       //ajax载入文件-开始
       var htmlobj= $.ajax({url:"assets/music-url.txt",async:false});
       var dataString = htmlobj.responseText;
@@ -116,5 +121,12 @@
       audio.volume=Volume;//调整音量
       display.innerHTML = "当前音量:"+Math.round(Volume * 100)+"%";//变更显示内容
     }
-    //空函数
+    function Music_info(){
+      var cookie=getCookie("DSMI");
+      if (cookie=="false") {
+        setCookie("DSMI","true",30);
+      } else {
+        setCookie("DSMI","false",30);
+      }
+    }
     function empty(){}
