@@ -41,6 +41,50 @@
       background-size: cover;
     }
   </style>
+  <style id="customization">
+    body {
+      background: url(assets/000009.webp) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    #heartalborada {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 65%;
+      height: 60%;
+    }
+
+    #liu {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 65%;
+      height: 60%;
+    }
+
+    #lookstars {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 65%;
+      height: 60%;
+    }
+
+    #endcredits {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 65%;
+      height: 60%;
+    }
+  </style>
   <title>沙雕生存服务器</title>
 </head>
 
@@ -81,7 +125,7 @@
           <h4 style="margin-left: 6%;margin-top: 2%;">背景音乐设置</h4>
           <p style="margin-left: 6%;margin-top: 2%;">
             <label class="mdui-checkbox">
-              <input id="DSMI_Btn" type="checkbox" onchange="Music_info()"/>
+              <input id="DSMI_Btn" type="checkbox" onchange="Music_info()" />
               <i class="mdui-checkbox-icon"></i>
               音乐提示信息开关
             </label>
@@ -112,36 +156,188 @@
       </ul>
     </div>
     <div class="mdui-tab mdui-color-theme" mdui-tab>
-      <a href="index.html" class="mdui-ripple mdui-ripple-white mdui-tab-active">首页</a>
-      <a href="team.html" class="mdui-ripple mdui-ripple-white">团队</a>
-      <a href="introVideo.html" class="mdui-rioole mdui-ripple-white">宣传视频</a>
+      <a href="#index-1" class="mdui-ripple mdui-ripple-white mdui-tab-active">首页</a>
+      <a href="#team-1" class="mdui-ripple mdui-ripple-white">团队</a>
+      <a href="#introvideo" class="mdui-rioole mdui-ripple-white">宣传视频</a>
       <a href="https://book.sdcraft.fun" target="_blank" class="mdui-ripple mdui-ripple-white">工具书</a>
     </div>
   </div>
-  <div style="margin-top: 25%;text-align: center;margin-bottom: 30%;">
-    <p style="font-size: 48px;">欢迎来到沙雕生存服务器</p>
-    <p style="font-size: 32px;">我们的大门永远向您敞开</p>
-  </div>
-  <div style="margin-top:10px;"></div>
-  <div style="text-align:center;">
-    <div style="margin:0 auto" onclick="egg2()">
-      <h1>开发进度:20%</h1>
+
+  <!-- Start of index page -->
+
+  <div id="index-1" class="mdui-p-a-2">
+    <div style="margin-top: 25%;text-align: center;margin-bottom: 30%;">
+      <p style="font-size: 48px;">欢迎来到沙雕生存服务器</p>
+      <p style="font-size: 32px;">我们的大门永远向您敞开</p>
     </div>
-    <p style="font-size: 24px;">或许您想尝试一下小游戏？</p>
-    <iframe src="Game/2048/2048 Game.html" height="470px" width="370px"></iframe>
-  </div>
-  <div class="mdui-progress">
-    <div class="mdui-progress-determinate" style="width: 20%;"></div>
-  </div>
-  <div class="preloader">
-    <div class="bigsquare" style="margin-top: 10px;">
-      <div class="square first"></div>
-      <div class="square second"></div>
-      <div class="square third"></div>
-      <div class="square fourth"></div>
+    <div style="margin-top:10px;"></div>
+    <div style="text-align:center;">
+      <div style="margin:0 auto" onclick="egg2()">
+        <h1>开发进度:20%</h1>
+      </div>
+      <p style="font-size: 24px;">或许您想尝试一下小游戏？</p>
+      <iframe src="Game/2048/2048 Game.html" height="470px" width="370px"></iframe>
     </div>
-    <p>正在加载......</p>
+    <div class="mdui-progress">
+      <div class="mdui-progress-determinate" style="width: 20%;"></div>
+    </div>
+    <div class="preloader">
+      <div class="bigsquare" style="margin-top: 10px;">
+        <div class="square first"></div>
+        <div class="square second"></div>
+        <div class="square third"></div>
+        <div class="square fourth"></div>
+      </div>
+      <p>正在加载......</p>
+    </div>
   </div>
+
+  <!-- End of index page -->
+
+  <!-- Start of Team page -->
+
+  <div id="team-1" class="mdui-p-a-2">
+    <div style="width: 85%;margin:0 auto;margin-top: 120px;">
+      <div class="mdui-card mdui-shadow-6" style="text-align: center;">
+        <h1>服务器管理团队</h1>
+      </div>
+    </div>
+    <div id="heartalborada" class="mdui-card mdui-hoverable">
+      <div class="mdui-card-media">
+        <img src="assets/card.jpg" />
+        <div class="mdui-card-media-covered">
+          <div class="mdui-card-primary">
+            <div style="width: 5px;height: 3px;">
+              <img class="mdui-card-header-avatar" style="height: 50px;width: 50px;margin: 10px 10px;"
+                src="https://q1.qlogo.cn/g?b=qq&nk=2680805702&s=5" />
+            </div>
+            <div class="mdui-card-primary-title">Heartalborada</div>
+            <div class="mdui-card-primary-subtitle">一个初一在读学生</div>
+            <button class="mdui-btn" style="float: right;" mdui-dialog="{target: '#admin-heartalborada'}">点我康康</button>
+            <div class="mdui-dialog" id="admin-heartalborada">
+              <div class="mdui-dialog-title">Heartalborada</div>
+              <div class="mdui-dialog-content">
+                <p>仅仅是一个初中生罢了</p>
+                <p><a target="_blank" href="https://space.bilibili.com/387390858">bilibli</a> | <a
+                    href="mailto:heartalborada@outlook.com">e-mail</a></p>
+              </div>
+              <div class="mdui-dialog-actions">
+                <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="liu" class="mdui-card mdui-hoverable">
+      <div class="mdui-card-media">
+        <img src="assets/card.jpg" />
+        <div class="mdui-card-media-covered">
+          <div class="mdui-card-primary">
+            <div style="width: 5px;height: 3px;">
+              <img class="mdui-card-header-avatar" style="height: 50px;width: 50px;margin: 10px 10px;"
+                src="https://q1.qlogo.cn/g?b=qq&nk=1507582124&s=5" />
+            </div>
+            <div class="mdui-card-primary-title">Liu</div>
+            <div class="mdui-card-primary-subtitle">Kizuna AI单推人</div>
+            <button class="mdui-btn" style="float: right;" mdui-dialog="{target: '#admin-Liu'}">点我康康</button>
+            <div class="mdui-dialog" id="admin-Liu">
+              <div class="mdui-dialog-title">Liu</div>
+              <div class="mdui-dialog-content">
+                <p>Kizuna AI单推人</p>
+                <p><a target="_blank" href="https://space.bilibili.com/281717652/">bilibli</a> | <a
+                    href="mailto:liukeluo.studio@gmail.com">e-mail</a></p>
+              </div>
+              <div class="mdui-dialog-actions">
+                <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="lookstars" class="mdui-card mdui-hoverable">
+      <div class="mdui-card-media">
+        <img src="assets/card.jpg" />
+        <div class="mdui-card-media-covered">
+          <div class="mdui-card-primary">
+            <div style="width: 5px;height: 3px;">
+              <img class="mdui-card-header-avatar" style="height: 50px;width: 50px;margin: 10px 10px;"
+                src="https://q1.qlogo.cn/g?b=qq&nk=1851865295&s=5" />
+            </div>
+            <div class="mdui-card-primary-title">LookStars</div>
+            <div class="mdui-card-primary-subtitle">Looking Forward To Stars</div>
+            <button class="mdui-btn" style="float: right;" mdui-dialog="{target: '#admin-LookStars'}">点我康康</button>
+            <div class="mdui-dialog" id="admin-LookStars">
+              <div class="mdui-dialog-title">LookStars</div>
+              <div class="mdui-dialog-content">
+                <p>据说是一个<span class="heimu" title="你知道的太多了">DD</span>单推人</p>
+                <p><span class="heimu" title="你知道的太多了">我们都特别希望她vtb/vup出道</span></p>
+                <p><a target="_blank" href="https://space.bilibili.com/415373891/">bilibli</a></p>
+              </div>
+              <div class="mdui-dialog-actions">
+                <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="endcredits" class="mdui-card mdui-hoverable">
+      <div class="mdui-card-media">
+        <img src="assets/card.jpg" />
+        <div class="mdui-card-media-covered">
+          <div class="mdui-card-primary">
+            <div style="width: 5px;height: 3px;">
+              <img class="mdui-card-header-avatar" style="height: 50px;width: 50px;margin: 10px 10px;"
+                src="https://q1.qlogo.cn/g?b=qq&nk=2954582482&s=5" />
+            </div>
+            <div class="mdui-card-primary-title">EndCredits
+            </div>
+            <div class="mdui-card-primary-subtitle">Positive Outlook!</div>
+            <button class="mdui-btn" style="float: right;" mdui-dialog="{target: '#admin-EndCredits'}">点我康康</button>
+            <div class="mdui-dialog" id="admin-EndCredits">
+              <div class="mdui-dialog-title">EndCredits</div>
+              <div class="mdui-dialog-content">
+                <p>是萌新</p>
+                <p><a target="_blank" href="https://github.com/EndCredits">Github</a></p>
+              </div>
+              <div class="mdui-dialog-actions">
+                <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script text="text/javascript">
+      var a = window.screen.width;
+      if (a < 1000) {
+        document.getElementById("heartalborada").style.width = "350px"
+        document.getElementById("heartalborada").style.height = "215px"
+        document.getElementById("liu").style.width = "350px"
+        document.getElementById("liu").style.height = "215px"
+        document.getElementById("lookstars").style.width = "350px"
+        document.getElementById("lookstars").style.height = "215px"
+        document.getElementById("endcredits").style.width = "350px"
+        document.getElementById("endcredits").style.height = "215px"
+      }
+    </script>
+  </div>
+
+  <!-- End of Team page-->
+
+  <!-- Start of IntroVideo Page -->
+  <div id="introvideo" class="mdui-p-a-2">
+    <div style="text-align: center;margin-top: 120px;">
+      <iframe class="mdui-hoverable mdui-shadow-6" height="640" width="1024"
+        src="https://player.bilibili.com/player.html?aid=246847844&bvid=BV1bv411Y7Xe" scrolling="no" border="0"
+        frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+      <div style="height: 10px;"></div>
+    </div>
+  </div>
+  <!-- End of IntroVideo Page -->
+
   <div class="mdui-fab-wrapper" mdui-fab="">
     <button class="mdui-fab mdui-ripple mdui-color-theme-accent" mdui-tooltip="{content: '更多选项', position: 'left'}">
       <i class="mdui-icon material-icons">add</i>
