@@ -68,44 +68,8 @@
 				</svg>
 			</a>
 			<a mdui-tooltip="{content: '重载页面'}" onclick="reloadPage()" class="mdui-btn mdui-btn-icon"><i
-					class="mdui-icon material-icons">refresh</i></a>
-			<a mdui-tooltip="{content: '音乐播放设置'}" class="mdui-btn mdui-btn-icon" mdui-menu="{target:'#music'}"><i
-					class="mdui-icon material-icons">music_note</i></a>
-			<ul class="mdui-menu" id="music" style="width:180px;height:520px">
-				<div>
-					<h4 style="margin-left: 6%;margin-top: 2%;text-align:center">背景音乐设置</h4>
-					<p style="margin-left: 6%;margin-top: 2%;">
-						<label class="mdui-checkbox">
-							<input id="DSMI_Btn" type="checkbox" onchange="DSMI_info()" />
-							<i class="mdui-checkbox-icon"></i>
-							音乐提示信息开关
-						</label>
-					</p>
-					<h5 style="margin-left: 6%;margin-top: 2%;text-align:center" id="volume-display">当前音量:50%</h5>
-				</div>
-				<div class="mdui-container mdui-p-t-5" style="width:90%">
-					<label class="mdui-slider">
-						<input type="range" id="volume" step="0.01" min="0" max="1" value="0.5"
-							oninput="changeVolume()" />
-					</label>
-				</div>
-				<div class="mdui-container mdui-p-t-5"></div>
-				<div class="mdui-container mdui-p-t-5" style="width:90%">
-					<div>
-						<h5 style="text-align:center" id="title_artist"></h5>
-						<h5 style="text-align:center" id="all_time"></h5>
-						<h5 style="text-align:center" id="play_time"></h5>
-						<p style="text-align:center" id="text_play"></p>
-					</div>
-					<label class="mdui-slider">
-						<div class="mdui-progress">
-							<div class="mdui-progress-determinate" style="width: 0%;" id="speed"></div>
-						</div>
-						<input type="range" id="change" step="0.001" min="0" max="100" value="0"
-							oninput="music_speed_change()" onmouseup="setInterval(music_speed_f(),1)" />
-					</label>
-				</div>
-			</ul>
+				class="mdui-icon material-icons">refresh</i>
+			</a>
 		</div>
 		<div class="mdui-tab mdui-color-theme" mdui-tab>
 			<a href="javascript:;" onclick="index()" class="mdui-ripple mdui-ripple-white">首页</a>
@@ -122,17 +86,9 @@
 		</button>
 		<div class="mdui-fab-dial" style="height: 0px;">
 			<a href="#top"><button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-pink"
-					style="transition-delay: 0ms;" mdui-tooltip="{content: '到顶部', position: 'left'}"><i
-						class="mdui-icon material-icons">arrow_upward</i></button></a>
-			<button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-red" style="transition-delay: 15ms;"
-				onclick="bf()" mdui-tooltip="{content: '暂停/播放音乐' , position: 'left'}"><i
-					class="mdui-icon material-icons" id="music-button">play_arrow</i></button>
-			<button onclick="next();" class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-orange"
-				style="transition-delay: 30ms;"><i class="mdui-icon material-icons"
-					mdui-tooltip="{content: '下一曲', position: 'left'}">skip_next</i></button>
-			<button onclick="prev();" class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-blue"
-				style="transition-delay: 45ms;"><i class="mdui-icon material-icons"
-					mdui-tooltip="{content: '上一曲', position: 'left'}">skip_previous</i></button>
+				style="transition-delay: 0ms;" mdui-tooltip="{content: '到顶部', position: 'left'}"><i
+				class="mdui-icon material-icons">arrow_upward</i>
+			</button></a>
 		</div>
 	</div>
 	<footer class="footer" style="text-align: center;">
