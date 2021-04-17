@@ -1,12 +1,6 @@
     audio=document.getElementById("bg-audio")
     //从文件中加载音乐
     function load_music(){
-      if (checkCookie_DSMI()=="false") {
-        mdui.alert("音乐设置:左下角加号和右上角音乐图标\n可在音乐设置内关掉此提示","Tips:",empty(),{confirmText:'我知道了',modal:true,history:false,closeOnEsc:true});
-      } else {
-        var btn=document.getElementById('DSMI_Btn');
-        btn.setAttribute("checked","")
-      }
       //ajax载入文件-开始
       var htmlobj= $.ajax({url:"assets/music-url.txt",async:false});
       var dataString = htmlobj.responseText;
@@ -33,13 +27,13 @@
       play_time.innerHTML = "播放时长:"+currentTime+"s"//输出到HTML
       text.innerHTML="百分比进度:"+percentage.toFixed(3)+"%"//四舍五入百分比进度(保留到千分位)
       progress_bar.style="width:"+percentage+"%"//进度条显示
-      mdui.updateSpinners()//刷新进度条
+      //mdui.updateSpinners()//刷新进度条
     }
     //滑块
     function music_speed_f(){
       var progress_change=document.getElementById('change')//滑块
       progress_change.value=percentage.toFixed(3)//四舍五入百分比进度(保留到千分位)
-      mdui.updateSliders()//刷新进度条
+      //mdui.updateSliders()//刷新进度条
     }
     //音乐进度调整+判断音乐是否加载
     function music_speed_change(){
