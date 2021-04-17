@@ -9,5 +9,4 @@ function page_load() {
     }
     page_id.innerHTML = get_page(url);
     music();
-    get_music()
 }
