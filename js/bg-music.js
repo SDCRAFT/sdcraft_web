@@ -31,7 +31,7 @@ function get_music(ap) {
   }
 }
 function music_info(id) {
-  var htmlobj = $.ajax({ url: "https://cros.heartalborada.workers.dev/http://music.163.com/api/search/pc?s=" + id + "&type=1", async: false,dataType:"jsonp",});
+  var htmlobj = $.ajax({ url: "https://cros.heartalborada.workers.dev/http://music.163.com/api/search/pc?s=" + id + "&type=1", async: false});
   var data = htmlobj.responseText;
   data = data.replace(/\"/g, '').replace(/:/g, '')
   var info = data.split(",");
