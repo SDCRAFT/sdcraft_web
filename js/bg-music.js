@@ -31,11 +31,11 @@ function get_music(ap) {
   }
 }
 function music_info(id) {
-  var htmlobj = $.ajax({ url: "https://cros.sdcraft.fun/http://music.163.com/api/search/pc?s=" + id + "&type=1", async: false});
+  var htmlobj = $.ajax({ url: "https://cros.heartalborada.workers.dev/http://music.163.com/api/search/pc?s=" + id + "&type=1", async: false});
   var data = htmlobj.responseText;
   data = data.replace(/\"/g, '').replace(/:/g, '')
   var info = data.split(",");
-  var lrc=$.ajax({url:'https://cros.sdcraft.fun/http://music.163.com/api/song/media?id=' + id,async:false}).responseText
+  var lrc=$.ajax({url:'https://cros.heartalborada.workers.dev/http://music.163.com/api/song/media?id=' + id,async:false}).responseText
   lrc=lrc.replace(/\\n/g,"\n")
   var out = [info[0].replace("{result{songs[{name", ""), info[25].replace("blurPicUrl", "").replace("http", "http:"), info[9].replace("artists[{name", ""),lrc]
   return out;
