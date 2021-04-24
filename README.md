@@ -13,4 +13,4 @@
 6. ~~音乐解析更换网易云~~ <br>
 7. ~~音乐播放器更换APlayer(APlayer [Github](https://github.com/MoePlayer/APlayer))~~ <br>
 8. 音乐播放加载速度提升
-  - 2020/4/24速度:40~60s
+     - 2020/4/24速度:40~60s
