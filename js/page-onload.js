@@ -8,5 +8,4 @@ function page_load() {
         return;
     }
     page_id.innerHTML = get_page(url);
-    music();
 }

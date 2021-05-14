@@ -30,10 +30,10 @@
 	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
 	<!-- 黑幕 -->
 	<link rel="stylesheet" href="css/Black-curtain.css" type="text/css">
-	<!-- Vue -->
-	<!-- APlayer-->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+	<!--Vue-->
 	<link rel="stylesheet" href="css/vue/vue-applications.css" type="text/css">
+	<!-- APlayer-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 	<!-- Customization -->
 	<style>
 		body {
@@ -107,7 +107,6 @@
 			</script>
 		</div>
 	</footer>
-	<script src="js/bg-music.js" crossorigin="anonymous"></script>
 	<script src="js/cookie.js"></script>
 	<script src="js/jump-ajax.js"></script>
 	<script src="js/page-onload.js"></script>
@@ -122,6 +121,24 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	<!-- APlayer -->
 	<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js" crossorigin="anonymous"></script>
+	<!-- Meting JS -->
+	<script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+	<!-- Music Load -->
+	<div>
+		<meting-js 
+		server="netease" 
+		type="playlist" 
+		id="164521381" 
+		fixed="true" 
+		volume="0.5" 
+		autoplay="true" 
+		loop="all" 
+		order="random" 
+		preload="auto" 
+		list-folded="true" 
+		list-max-height="500px">
+		</meting-js>
+	</div>
 </body>
 
 </html>
